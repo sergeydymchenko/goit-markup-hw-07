@@ -25,11 +25,10 @@
   transition-property: fill, transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
-}
-
-.list-item-svg :hover,
-.list-item-svg:focus {
-  fill: $color-primary;
+  & :hover,
+  &:focus {
+    fill: $color-primary;
+  }
 }
 
 .list-of-requirements {

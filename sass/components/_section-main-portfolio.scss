@@ -37,10 +37,16 @@
   transition-timing-function: $transition-timing-function;
   border-radius: $radius-border;
   padding: 6px 22px;
+  &:last-of-type {
+    margin-right: none;
+  }
+  &:hover,
+  &:focus {
+    color: $font-color-primary;
+    background: $color-primary;
+  }
 }
-.nav-portfolio-item:last-of-type {
-  margin-right: none;
-}
+
 .buttons {
   display: flex;
   padding-bottom: 50px;
@@ -48,11 +54,7 @@
 .nav-portfolio-item {
   border: none;
 }
-.nav-portfolio-item:hover,
-.nav-portfolio-item:focus {
-  color: $font-color-primary;
-  background: $color-primary;
-}
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -78,16 +80,25 @@
   margin-bottom: 30px;
   width: 370px;
   height: 404px;
+  &:hover .overlay {
+    transform: translatey(0);
+  }
+  &:focus .overlay {
+    transform: translatey(0);
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 .projects-item {
   display: block;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
-.projects-item-link:hover .overlay {
-  transform: translatey(0);
-}
-.projects-item-link:focus .overlay {
-  transform: translatey(0);
-}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -115,15 +126,7 @@
 
   color: $font-color-primary;
 }
-.projects-item-div:hover,
-.projects-item-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
-.projects-item:nth-child(3n) {
-  margin-right: 0;
-}
 .example-item {
   font-family: $font-family-primary;
   font-style: normal;

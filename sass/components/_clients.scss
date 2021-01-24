@@ -26,9 +26,9 @@
   width: 170px;
   height: 90px;
   display: flex;
-}
-.clients-logos-area:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .clients-svg {
@@ -42,14 +42,7 @@
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
 }
-.clients-logos-area-label:hover,
-.clients-logos-area-label:focus {
-  fill: $color-primary;
-}
-.clients-logos-area-label:hover .clients-svg,
-.clients-logos-area-label:focus .clients-svg {
-  fill: $color-primary;
-}
+
 .clients-logos-area-label {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -62,8 +55,16 @@
   transition-property: fill, transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
-}
-.clients-logos-area-label:hover,
-.clients-logos-area-label:focus {
-  border: 1px solid $color-primary;
+  &:hover,
+  &:focus {
+    fill: $color-primary;
+  }
+  &:hover .clients-svg,
+  &:focus .clients-svg {
+    fill: $color-primary;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $color-primary;
+  }
 }

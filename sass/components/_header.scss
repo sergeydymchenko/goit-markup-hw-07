@@ -11,6 +11,13 @@
 }
 .navigation-item {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
 }
 .header-line {
   position: absolute;
@@ -33,6 +40,16 @@
   transition-property: color, transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+  &:focus .adresssvg {
+    fill: $color-primary;
+  }
+  &:hover .adresssvg {
+    fill: $color-primary;
+  }
 }
 
 .header {
@@ -57,9 +74,7 @@
 .header .logo {
   margin-right: 93px;
 }
-.navigation-item:not(:last-child) {
-  margin-right: 50px;
-}
+
 .adresssvg {
   display: block;
   width: 16px;
@@ -69,17 +84,12 @@
   transition-property: fill, transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
+  & :hover,
+  & :focus {
+    fill: $color-primary;
+  }
 }
-.adresssvg :hover,
-.adresssvg :focus {
-  fill: $color-primary;
-}
-.address-link:focus .adresssvg {
-  fill: $color-primary;
-}
-.address-link:hover .adresssvg {
-  fill: $color-primary;
-}
+
 .adress {
   display: flex;
   margin-left: auto;
@@ -103,6 +113,17 @@
   transition-property: color, transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
+  &:hover .telsvg {
+    fill: $color-primary;
+  }
+  &:focus .telsvg {
+    fill: $color-primary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
 }
 .telsvgitem {
   display: flex;
@@ -111,12 +132,7 @@
   margin-left: 31px;
   align-items: center;
 }
-.header-tell:hover .telsvg {
-  fill: $color-primary;
-}
-.header-tell:focus .telsvg {
-  fill: $color-primary;
-}
+
 .telsvg {
   display: flex;
   width: 13px;
@@ -126,19 +142,10 @@
   transition-property: fill, transform;
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
-}
-
-.telsvg:hover,
-.telsvg:focus {
-  fill: $color-primary;
-}
-.navigation-item :hover,
-.navigation-item :focus,
-.address-link:hover,
-.address-link:focus,
-.header-tell:hover,
-.header-tell:focus {
-  color: $color-primary;
+  &:hover,
+  &:focus {
+    fill: $color-primary;
+  }
 }
 
 .adress {
